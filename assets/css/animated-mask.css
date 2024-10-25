@@ -1,0 +1,34 @@
+.masked {
+	overflow: hidden;
+	display: inline-block;
+}
+
+.masked > * {
+	margin: 0;
+	top: 2rem;
+	position: relative;
+	opacity: 0;
+}
+
+.animated-unmask > * {
+	opacity: 1;
+	top: 0;
+	animation: 1s unmask var(--wp--custom--easing--dynamic);
+}
+
+.animated-already-unmask > * {
+	opacity: 1;
+	top: 0;
+	animation: none;
+}
+
+@keyframes unmask {
+	from {
+		opacity: 0;
+		top: 2rem;
+	}
+	to {
+		opacity: 1;
+		top: 0;
+	}
+}

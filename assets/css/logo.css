@@ -1,0 +1,44 @@
+.site-title__container {
+	opacity: 0;
+	transition: opacity 3s ease-in-out .25s;
+}
+
+.bg--loaded .site-title__container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: var(--wp--custom--z-index--title);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	opacity: 1;
+}
+
+.bg--loaded .site-title__container h1 {
+	width: 45rem;
+	position: relative;
+	top: 0;
+	animation: nintendo 5s cubic-bezier(0, 0.25, 0, 1);
+}
+
+.bg--loaded .site-title__container img {
+	width: 100%;
+	height: auto;
+}
+
+.site-title__container--already-open {
+	opacity: 1;
+	h1 {
+		top: 0!important;
+		animation: none!important;
+	}
+}
+
+@keyframes nintendo {
+	0% { top: -75% }
+	100% { top: 0 }
+}

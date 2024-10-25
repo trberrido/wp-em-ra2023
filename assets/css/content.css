@@ -1,0 +1,201 @@
+.content {
+	opacity: 0;
+	transition: all .5 ease-in-out;
+	position: absolute;
+	z-index: var(--wp--custom--z-index--content);
+
+	--chevron--top: 10rem;
+}
+
+.content::before {
+	z-index: -1;
+	position: absolute;
+	bottom: 0;
+	left:0;
+	right: 0;
+	top: calc( var(--chevron--top) + 10rem );
+	background-color: #E6E6E6;
+	content: '';
+	display: block;
+}
+
+.content-header__logo-container {
+	position: absolute;
+	top: var(--wp--preset--spacing--50);
+	left: var(--wp--preset--spacing--60);
+	z-index: -1;
+}
+
+.ra23-page__container {
+	width: 95%;
+	max-width: 50rem;
+	margin: auto;
+}
+
+.ra23-page__container .page__title {
+	margin: 5rem 0;
+}
+
+.ra23-row {
+	display: flex;
+	flex-direction: row;
+	gap: var(--wp--preset--spacing--50);
+}
+
+.ra23-row.--indent {
+	padding-left: calc(2 * var(--wp--preset--spacing--90));
+}
+
+.ra23-column { flex: 1;}
+
+.content--fadein {
+	opacity: 1;
+	background: var(--wp--preset--color--base);
+	transition: all .5 ease-in-out;
+
+	min-height: 100vh;
+	min-width: 100vw;
+
+	top: 0;
+	left: 0;
+}
+
+.page__title {
+	font-weight: 400;
+	color: var(--wp--preset--color--primary);
+	text-align: center;
+	font-size: var(--wp--preset--font-size--xl)
+}
+
+.ra23-content__item {
+	margin: 0 0 var(--wp--preset--spacing--90) 0;
+	opacity: 0;
+	transform: scale(.9);
+	transition: opacity 1s, transform .5s;
+}
+
+.ra23-content__item.--fadein {
+	transform: scale(1);
+	opacity: 1;
+}
+
+.ra23-content__item p {
+	margin: 0;
+	color: var(--wp--preset--color--contrast);
+}
+
+.ra23-content__item.chapo h2 {
+	font-weight: 400;
+	text-align: center;
+	font-size: calc( 1.5 * var(--wp--preset--font-size--xxxl) );
+	color: var(--wp--preset--color--primary);
+	margin: var(--wp--preset--spacing--90) auto;
+	max-width: 42rem;
+}
+
+.ra23-content__item.chapo p {
+	font-weight: 800;
+	font-size: var(--wp--preset--font-size--xl);
+	color: var(--wp--preset--color--primary);
+	max-width: 35rem;
+}
+
+.ra23-content__item h2 {
+	font-weight: 800;
+	font-size: var(--wp--preset--font-size--xxl);
+	color: var(--wp--preset--color--primary);
+	max-width: 20rem;
+}
+
+.ra23-content__item:not(.chapo) h2::after {
+	content: '';
+	display: block;
+	width: 5rem;
+	height: .5rem;
+	background-color: var(--wp--preset--color--secondary);
+	margin-top: var(--wp--preset--spacing--60);
+}
+
+.ra23-content__item.chapo-video {
+	margin: 0;
+}
+
+.ra23-content__item img { width: 100% }
+
+.ra23-content__item img:not(.--nomask) {
+	mask-image: url("data:image/svg+xml,%3Csvg width='301' height='200' viewBox='0 0 301 200' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M281 0.00373333C292.046 0.0037753 301 8.95814 301 20.0039L300.999 180C300.999 191.046 292.044 200 280.999 200L20.0002 199.999C8.95444 199.999 0.000119817 191.045 0.00025154 179.999L0.0012884 93.0523C0.0118092 87.1733 1.37345 81.3675 3.99086 76.0414C6.60827 70.7152 10.4182 65.9973 15.154 62.218L85.8948 9.7862C91.2776 5.47292 105.867 -0.150633 112.905 0.00309466L281 0.00373333Z' fill='%23FF735F'/%3E%3C/svg%3E%0A");
+	mask-position: center;
+	mask-size: contain;
+	mask-repeat: no-repeat;
+	aspect-ratio: 3/2;
+}
+
+.ra23-content__item img.--nomask { border-radius: var(--wp--custom--border--radius--sm) }
+
+.highlight-green.--has-image {
+	position: relative;
+}
+
+.highlight-green.--has-image img {
+	position: absolute;
+	right: 0;
+	top: -5rem;
+	width: 10rem;
+}
+
+.highlight-green.--has-image p {
+	width: 26rem;
+}
+
+.ra23-content__item iframe {
+	width: 100%;
+	aspect-ratio: 16/9;
+	border-radius: var(--wp--custom--border--radius--sm);
+	background-color: var(--wp--custom--color--cua--bg--400);
+	background-image: var(--loader--white);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.ra23-content__item iframe.--pdf {
+	aspect-ratio: 21/29.7;
+}
+
+@media screen and (max-width: 800px) {
+	.ra23-row.--indent {
+		padding-left: 0;
+	}
+	.ra23-content__item {
+		margin: var(--wp--preset--spacing--40) 0;
+	}
+	.ra23-content__item.highlight-white:first-child {
+		margin-top: var(--wp--preset--spacing--90);
+	}
+	.ra23-page__container { width: 90% }
+	.content__chevron { top: 15rem }
+	.ra23-page__container .page__title {
+		margin-top: 10rem;
+		margin-bottom: 0;
+		text-align: left;
+	}
+	.ra23-content__item.chapo > h2 {
+		font-size: var(--wp--preset--font-size--xxxl);
+		text-align: left;
+	}
+	.ra23-row {
+		flex-direction: column;
+	}
+	.ra23-content__item:not(.chapo) > p {
+		padding-left: 0;
+		margin-left: 0;
+	}
+
+	.highlight-green.--has-image img {
+		display: none;
+	}
+
+	.highlight-green.--has-image p {
+		width: auto;
+	}
+
+}

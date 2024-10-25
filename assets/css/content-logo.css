@@ -1,0 +1,18 @@
+.content__logo-container a {
+	display: flex;
+	flex-direction: column;
+	text-decoration: none;
+	color: var(--wp--preset--color--primary);
+	font-weight: 600;
+	gap: .5rem;
+	width: 3rem;
+	align-items: center;
+	transition: scale .2s;
+	scale: 1;
+}
+
+.content__logo-container a:hover {
+	scale: 1.1;
+}
+
+.content__logo-container a img { width: 100% }

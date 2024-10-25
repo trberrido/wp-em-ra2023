@@ -1,0 +1,247 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"settings": {
+		"custom": {
+			"zIndex": {
+				"hidden": 0,
+				"title": 10,
+				"canvas": 20,
+				"video": 30,
+				"content": 40,
+				"menu": 50,
+				"transition": 60
+			},
+			"easing": {
+				"dynamic": "cubic-bezier(.85, 0, .15, 1)"
+			},
+			"border": {
+				"radius": {
+					"s": ".5rem",
+					"sm": "1rem",
+					"m": "3.75rem",
+					"l": "6rem"
+				}
+			},
+			"color": {
+				"cua": {
+					"bg": {
+						"800": "#98D4B2",
+						"400": "#B7DBBC",
+						"300": "#A1D0A7",
+						"100": "#D6F6E1"
+					}
+				},
+				"primary": {
+					"600": "#104641",
+					"500": "#0F695F",
+					"400": "#57968F",
+					"300": "#87B4AF",
+					"200": "#B7D2CF",
+					"100": "#DAE9E7",
+					"050": "#F3F8F7"
+				},
+				"secondary": {
+					"600": "#AF5041",
+					"500": "#FF735F",
+					"400": "#FF9D8F",
+					"300": "#FFB9AF",
+					"200": "#FFD5CF",
+					"100": "#FFF1EF",
+					"050": "#FFF8F7"
+				},
+				"tertiary": {
+					"600": "#859C85",
+					"500": "#BCDCBC",
+					"400": "#D0E7D0",
+					"300": "#DDEDDD",
+					"200": "#EBF5EB",
+					"100": "#F8FBF8",
+					"050": "#FCFDFC"
+				},
+				"neutral": {
+					"600": "#2A2C2B",
+					"500": "#666E79",
+					"400": "#A5ACB5",
+					"300": "#C5CFDA",
+					"200": "#EDF0F5",
+					"100": "#F6F7FA",
+					"050": "#FFFFFF"
+				},
+				"status": {
+					"error": {
+						"default": "#CD2737",
+						"stroke": "#E6939B",
+						"light": "#FCF0F1"
+					},
+					"success": {
+						"default": "#128041",
+						"stroke": "#88BFA0",
+						"light": "#F1F7F4"
+					},
+					"warning": {
+						"default": "#DA8236",
+						"stroke": "#E7BB95",
+						"light": "#FCF0E8"
+					}
+				}
+			}
+		},
+		"spacing": {
+			"spacingSizes": [
+				{
+					"size": "0",
+					"name": "xxxs",
+					"slug": "00"
+				},
+				{
+					"size": ".25rem",
+					"name": "xxxs",
+					"slug": "10"
+				},
+				{
+					"size": ".5rem",
+					"name": "xxs",
+					"slug": "20"
+				},
+				{
+					"size": ".75rem",
+					"name": "xs",
+					"slug": "30"
+				},
+				{
+					"size": "1rem",
+					"name": "s",
+					"slug": "40"
+				},
+				{
+					"size": "1.5rem",
+					"name": "m",
+					"slug": "50"
+				},
+				{
+					"size": "2rem",
+					"name": "l",
+					"slug": "60"
+				},
+				{
+					"size": "2.5rem",
+					"name": "xl",
+					"slug": "70"
+				},
+				{
+					"size": "3rem",
+					"name": "xxl",
+					"slug": "80"
+				},
+				{
+					"size": "3.5rem",
+					"name": "xxxl",
+					"slug": "90"
+				}
+			]
+		},
+		"color": {
+			"palette": [
+				{
+					"name": "Background",
+					"slug": "base",
+					"color": "var(--wp--custom--color--neutral--100)"
+				},
+				{
+					"name": "Text",
+					"slug": "contrast",
+					"color": "var(--wp--custom--color--neutral--600)"
+				},
+				{
+					"name": "Primary",
+					"slug": "primary",
+					"color": "var(--wp--custom--color--primary--500)"
+				},
+				{
+					"name": "Primary lighter",
+					"slug": "primary-lighter",
+					"color": "var(--wp--custom--color--primary--400)"
+				},
+				{
+					"name": "Primary darker",
+					"slug": "primary-darker",
+					"color": "var(--wp--custom--color--primary--600)"
+				},
+				{
+					"name": "Secondary",
+					"slug": "secondary",
+					"color": "var(--wp--custom--color--secondary--500)"
+				}
+			]
+		},
+		"typography": {
+			"fontSizes": [
+				{
+					"name": "xs",
+					"slug": "xs",
+					"size": ".75rem"
+				},
+				{
+					"name": "s",
+					"slug": "s",
+					"size": ".875rem"
+				},
+				{
+					"name": "m",
+					"slug": "m",
+					"size": "1rem"
+				},
+				{
+					"name": "l",
+					"slug": "l",
+					"size": "1.25rem"
+				},
+				{
+					"name": "xl",
+					"slug": "xl",
+					"size": "1.5rem"
+				},
+				{
+					"name": "xxl",
+					"slug": "xxl",
+					"size": "1.75rem"
+				},
+				{
+					"name": "xxxl",
+					"slug": "xxxl",
+					"size": "2.65rem"
+				}
+			],
+			"fontFamilies": [
+				{
+					"fontFace": [
+						{
+							"fontFamily": "Mont",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": ["file:./assets/fonts/Mont-Regular.otf"]
+						},
+						{
+							"fontFamily": "Mont",
+							"fontStyle": "normal",
+							"fontWeight": "500",
+							"src": ["file:./assets/fonts/Mont-SemiBold.otf"]
+						}
+					],
+					"fontFamily": "\"Mont\", sans-serif",
+					"name": "Mont",
+					"slug": "default"
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"text": "var(--wp--preset--color--contrast)"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--default)"
+		}
+	}
+}
